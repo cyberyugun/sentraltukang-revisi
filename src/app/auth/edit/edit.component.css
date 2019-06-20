@@ -1,0 +1,59 @@
+mat-form-field {
+  width: 300px;
+}
+
+button.as{
+
+  margin-left: 180px;
+  top: 310px;
+ width: 110px;
+ height: 28px;
+  background: #FE4001;
+  text-align: center;
+letter-spacing: 1.25px;
+color: #FFFFFF;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+}
+button[type=button].a{
+margin-right: 180px;
+top: 270px;
+width: 110px;
+height: 28px;
+background: #FFFFFF;
+text-align: center;
+letter-spacing: 1.25px;
+color: #FE4001;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+}
+
+p{
+  position: absolute;
+left: 25.56%;
+right: 23.89%;
+top: 0px;
+bottom: 0px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 0px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.25px;
+
+color: #000000;
+}
+hr{
+  background: rgba(0, 0, 0, 0.87);height: 0px; width: 100%;
+}
+
+

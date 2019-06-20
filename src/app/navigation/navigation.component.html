@@ -1,0 +1,62 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+   <!-- sidenav here  -->
+        <mat-nav-list>
+            
+           
+            <a *ngIf="token"  mat-list-item routerLink="/userlist">
+            
+              <span class="nav-caption">User List</span>
+            </a>
+            <mat-list-item>
+              <button *ngIf="token" mat-icon-button (click)="logout()">
+               
+                <span class="nav-caption">Log Out</span>
+              </button>
+            </mat-list-item>
+            <a style="margin-top:30px;" mat-list-item>
+              
+                <span class="nav-caption">v 1.0</span>
+              </a>
+           
+          </mat-nav-list>
+          
+<!-- end side nav -->
+
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar >
+
+        <!-- <div fxHide.gt-xs> -->
+            <div style="margin-left: 0px">
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+
+        <div class="g" > 
+          <img src="../../../assets/img/Logo.png" class="g" >
+        </div>     
+
+        <!-- <div fxLayoutAlign="flex-end" fxHide.xs>
+          <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+            <li *ngIf="!token">
+              <a routerLink="/signup">Signup</a>
+            </li>
+            <li *ngIf="!token">
+              <a routerLink="/login">Login</a>
+            </li>
+            <li *ngIf="token">
+              <a  routerLink="/userlist">User List</a>
+            </li>
+            <li *ngIf="token">
+              <a>Logout</a>
+            </li>
+          </ul>
+        </div> -->
+      </mat-toolbar>
+    <app-welcome></app-welcome>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

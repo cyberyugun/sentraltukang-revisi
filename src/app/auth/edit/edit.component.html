@@ -1,0 +1,50 @@
+<div class="flex-container">
+    <div> <button mat-icon-button routerLink="/userlist"><mat-icon>keyboard_arrow_left</mat-icon></button></div>
+    <div></div>
+  </div>
+  
+  
+  <div>
+    <p>Update</p>
+  </div>
+  <hr>
+<div 
+class="signup-form">
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <mat-form-field style="position: absolute; top: 104px;">
+      <input  type="name" matInput placeholder="Name" name="name" required [(ngModel)]="name" value={{user.name}}>
+
+    </mat-form-field>
+    <mat-form-field style="position: absolute; top: 152px;">
+      <input type="name" matInput placeholder="Email"    name="email" [(ngModel)]="email"  value={{user.email}} required >
+    </mat-form-field>
+
+
+    <mat-form-field style="position: absolute; top: 210px;">
+      <input [type]="hidea ? 'password' : 'text'"  matInput placeholder="Password"  name="password" required minlength="6" [(ngModel)]="password">
+      <!-- <button mat-icon-button matSuffix (click)="hidea = !hidea" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidea"> -->
+          <mat-icon matSuffix (click)="hidea = !hidea">{{hidea ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <!-- </button> -->
+    </mat-form-field>
+
+
+    <mat-form-field style="position: absolute;  top: 258px; ">
+      <input [type]="hide ? 'password' : 'text'"  matInput placeholder="Re-nter Password" required name="password1" required minlength="6" [(ngModel)]="password1">
+      <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide"> -->
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <!-- </button> -->
+      
+    </mat-form-field>
+    <mat-form-field style="position: absolute; top: 306px;">
+      <input matInput placeholder="Birthday" [matDatepicker]="picker" [max]="maxDate" required [(ngModel)]="date" name="date" value={{user.date}}>
+      <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>date_range</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker disabled="false"></mat-datepicker>
+    </mat-form-field>
+  
+<button class="as" type="submit" mat-raised-button >Update</button>
+<button class="a" type="button" mat-raised-button routerLink="/userlist" >Back</button>
+  </form>
+ 
+</div>
